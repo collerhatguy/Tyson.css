@@ -1,0 +1,12 @@
+
+$shadowAngle: 160deg;
+$hairColorGradient1: rgb(177, 146, 132);
+$hairColorGradient2: rgb(132, 98, 88);
+$hairColorGradient3: rgb(121, 76, 69);
+$hairGradient: linear-gradient(
+    $shadowAngle, 
+    $hairColorGradient1, 
+    $hairColorGradient2, 
+    $hairColorGradient3
+);
+$hairHeight: 10vw;

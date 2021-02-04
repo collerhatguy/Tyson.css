@@ -1,0 +1,9 @@
+
+$shadowAngle: 160deg;
+$irisColorGradient1: rgb(165, 108, 98);
+$irisColorGradient2: rgb(132, 98, 88);
+$irisGradient: linear-gradient(
+    $shadowAngle, 
+    $irisColorGradient1, 
+    $irisColorGradient2
+);

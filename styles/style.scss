@@ -1,0 +1,78 @@
+@import "./variables/eyeVariables";
+@import "./variables/hairVariables";
+@import "./mixin";
+
+$skinColor: rgb(225, 188, 160);
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+main {
+    height: 100vh;
+    width: 100vw;
+}
+#head {
+    @include flexCenter();
+    position: relative;
+    height: 95vh;
+    #hair {
+        background: $hairGradient;
+        position: absolute;
+        top: 5vw;
+        width: 40vw;
+        height: $hairHeight;
+        border-radius: 9999px 9999px 0 0;
+    }
+    #face {
+        @include flexCenter();
+        position: absolute;
+        top: 5vw + $hairHeight;
+        width: 40vw;
+        height: 50vw;
+        background-color: $skinColor;
+        #eye {
+            @include flexCenter();
+            position: absolute;
+            top: 5vw;
+            background-color: whitesmoke;
+            width: 15vw;
+            height: 10vw;
+            border-radius: 100%;
+            position: absolute;
+            #iris {
+                @include flexCenter();
+                width: 5vw;
+                height: 5vw;
+                border-radius: 100%;
+                background: $irisGradient;
+                #pupil {
+                    width: 2vw;
+                    height: 2vw;
+                    background-color: black;
+                    border-radius: 100%;
+                }
+            }
+        }
+        #ears {
+            position: absolute;
+            width: 40vw;
+            top: 5vw;
+            .ear {
+                position: absolute;
+                height: 10vw;
+                width: 5vw;
+                background-color: $skinColor;
+            }
+            .ear1 {
+                left: -5vw;
+                border-radius: 9999px 0 0 9999px;
+            }
+            .ear2 {
+                right: -5vw;
+                border-radius: 0 9999px 9999px 0;
+            }
+        }
+    }
+}
+

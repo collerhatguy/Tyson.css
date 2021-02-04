@@ -1,0 +1,115 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+}
+
+#head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 95vh;
+}
+
+#head #hair {
+  background: linear-gradient(160deg, #b19284, #846258, #794c45);
+  position: absolute;
+  top: 5vw;
+  width: 40vw;
+  height: 10vw;
+  border-radius: 9999px 9999px 0 0;
+}
+
+#head #face {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 15vw;
+  width: 40vw;
+  height: 50vw;
+  background-color: #e1bca0;
+}
+
+#head #face #eye {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 5vw;
+  background-color: whitesmoke;
+  width: 15vw;
+  height: 10vw;
+  border-radius: 100%;
+  position: absolute;
+}
+
+#head #face #eye #iris {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 100%;
+  background: linear-gradient(160deg, #a56c62, #846258);
+}
+
+#head #face #eye #iris #pupil {
+  width: 2vw;
+  height: 2vw;
+  background-color: black;
+  border-radius: 100%;
+}
+
+#head #face #ears {
+  position: absolute;
+  width: 40vw;
+  top: 5vw;
+}
+
+#head #face #ears .ear {
+  position: absolute;
+  height: 10vw;
+  width: 5vw;
+  background-color: #e1bca0;
+}
+
+#head #face #ears .ear1 {
+  left: -5vw;
+  border-radius: 9999px 0 0 9999px;
+}
+
+#head #face #ears .ear2 {
+  right: -5vw;
+  border-radius: 0 9999px 9999px 0;
+}
+/*# sourceMappingURL=style.css.map */
