@@ -144,11 +144,13 @@ main {
     position: absolute;
 }
 #shirt {
-    background: $shirtGradient;
+    background-image: url("../campHalfBloodLogo.png");
+    background-repeat: no-repeat;
+    background-size: $headWidth * 1.5 10rem;
     position: absolute;
-    width: $headWidth * 2;
+    width: $headWidth * 1.5;
     height: 10rem;
     top: 35rem;
-    border-radius: 100% 100% 0 0;
+    border-radius: 20% 20% 0 0;
 }
 
