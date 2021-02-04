@@ -1,54 +1,80 @@
 @import "./variables/eyeVariables";
 @import "./variables/hairVariables";
+@import "./variables/earVariables";
+@import "./variables/miscVariables";
 @import "./mixin";
 
-$skinColor: rgb(225, 188, 160);
 
 *, *::after, *::before {
     margin: 0;
     padding: 0;
 }
 main {
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
+    @include flexCenter();
+    position: relative;
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: url("../campHalfBloodPic.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:  cover;
+        filter: blur(2px);
+        z-index: -1;
+    }
 }
 #head {
     @include flexCenter();
-    position: relative;
-    height: 95vh;
+    position: absolute;
+    width: $headWidth;
+    height: 45rem;
     #hair {
         background: $hairGradient;
         position: absolute;
-        top: 5vw;
-        width: 40vw;
+        top: $offsetTop - $hairHeight;
+        width: $headWidth;
         height: $hairHeight;
-        border-radius: 9999px 9999px 0 0;
+        border-radius: 9999rem 9999rem 0 0;
     }
     #face {
         @include flexCenter();
         position: absolute;
-        top: 5vw + $hairHeight;
-        width: 40vw;
-        height: 50vw;
+        top: $offsetTop;
+        width: $headWidth;
+        height: 25rem;
         background-color: $skinColor;
+        border-radius: 0 0 10% 10%;
+        #eyeBrow {
+            width: $headWidth / 2;
+            height: 4rem;
+            position: absolute;
+            top: 3rem;
+            border-top: 1rem solid $hairColorGradient2;
+            border-radius: 100%;
+        }
         #eye {
             @include flexCenter();
             position: absolute;
-            top: 5vw;
+            top: 5rem;
             background-color: whitesmoke;
-            width: 15vw;
-            height: 10vw;
+            width: $headWidth / 2;
+            height: 4rem;
             border-radius: 100%;
+            border-top: .1rem solid rgb(63, 30, 33);
+            border-bottom: .1rem solid rgb(63, 30, 33);
             position: absolute;
             #iris {
                 @include flexCenter();
-                width: 5vw;
-                height: 5vw;
+                width: $headWidth / 8;
+                height: $headWidth / 8;
                 border-radius: 100%;
                 background: $irisGradient;
                 #pupil {
-                    width: 2vw;
-                    height: 2vw;
+                    width: $headWidth / 16;
+                    height: $headWidth / 16;
                     background-color: black;
                     border-radius: 100%;
                 }
@@ -56,23 +82,73 @@ main {
         }
         #ears {
             position: absolute;
-            width: 40vw;
-            top: 5vw;
+            width: $headWidth;
+            top: 4rem;
             .ear {
                 position: absolute;
-                height: 10vw;
-                width: 5vw;
+                height: 5rem;
+                width: $earWidth;
                 background-color: $skinColor;
             }
             .ear1 {
-                left: -5vw;
-                border-radius: 9999px 0 0 9999px;
+                left: -$earWidth;
+                border-radius: 9999rem 0 0 9999rem;
+                &::after {
+                    background-color: $earShadowColor;
+                    width: 70%;
+                    height: 70%;
+                }
             }
             .ear2 {
-                right: -5vw;
-                border-radius: 0 9999px 9999px 0;
+                right: -$earWidth - .1rem;
+                border-radius: 0 9999rem 9999rem 0;
+                border-left: .1rem solid $hairColorGradient1;
+                &::after {
+                    background-color: $earShadowColor;
+                    width: 70%;
+                    height: 70%;
+                }
+            }
+        }
+        #nose {
+            position: absolute;
+            top: 11rem;
+            border: .5rem solid $hairColorGradient1;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0 0 100% 100%;
+            border-top: none;
+        }
+        #mouth {
+            width: $headWidth / 2;
+            height: 4rem;
+            position: absolute;
+            overflow: hidden;
+            top: 15rem;
+            background-color: whitesmoke;
+            display: grid;
+            grid-template-columns: repeat(4, $headWidth / 8);
+            grid-template-rows: repeat(2, 2.1rem);
+            border-radius: 0 0 100% 100%;
+            .teeth {
+                border: .1rem solid grey;
             }
         }
     }
+}
+#neck {
+    background-color: $skinColor;
+    height: 10rem;
+    width: $headWidth / 2;
+    top: 30rem;
+    position: absolute;
+}
+#shirt {
+    background: $shirtGradient;
+    position: absolute;
+    width: $headWidth * 2;
+    height: 10rem;
+    top: 35rem;
+    border-radius: 100% 100% 0 0;
 }
 

@@ -4,8 +4,31 @@
 }
 
 main {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+main::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../campHalfBloodPic.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  z-index: -1;
 }
 
 #head {
@@ -18,17 +41,18 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  height: 95vh;
+  position: absolute;
+  width: 20rem;
+  height: 45rem;
 }
 
 #head #hair {
   background: linear-gradient(160deg, #b19284, #846258, #794c45);
   position: absolute;
-  top: 5vw;
-  width: 40vw;
-  height: 10vw;
-  border-radius: 9999px 9999px 0 0;
+  top: 2rem;
+  width: 20rem;
+  height: 5rem;
+  border-radius: 9999rem 9999rem 0 0;
 }
 
 #head #face {
@@ -42,10 +66,20 @@ main {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 15vw;
-  width: 40vw;
-  height: 50vw;
+  top: 7rem;
+  width: 20rem;
+  height: 25rem;
   background-color: #e1bca0;
+  border-radius: 0 0 10% 10%;
+}
+
+#head #face #eyeBrow {
+  width: 10rem;
+  height: 4rem;
+  position: absolute;
+  top: 3rem;
+  border-top: 1rem solid #846258;
+  border-radius: 100%;
 }
 
 #head #face #eye {
@@ -59,11 +93,13 @@ main {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 5vw;
+  top: 5rem;
   background-color: whitesmoke;
-  width: 15vw;
-  height: 10vw;
+  width: 10rem;
+  height: 4rem;
   border-radius: 100%;
+  border-top: 0.1rem solid #3f1e21;
+  border-bottom: 0.1rem solid #3f1e21;
   position: absolute;
 }
 
@@ -77,39 +113,99 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 5vw;
-  height: 5vw;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 100%;
   background: linear-gradient(160deg, #a56c62, #846258);
 }
 
 #head #face #eye #iris #pupil {
-  width: 2vw;
-  height: 2vw;
+  width: 1.25rem;
+  height: 1.25rem;
   background-color: black;
   border-radius: 100%;
 }
 
 #head #face #ears {
   position: absolute;
-  width: 40vw;
-  top: 5vw;
+  width: 20rem;
+  top: 4rem;
 }
 
 #head #face #ears .ear {
   position: absolute;
-  height: 10vw;
-  width: 5vw;
+  height: 5rem;
+  width: 2.5rem;
   background-color: #e1bca0;
 }
 
 #head #face #ears .ear1 {
-  left: -5vw;
-  border-radius: 9999px 0 0 9999px;
+  left: -2.5rem;
+  border-radius: 9999rem 0 0 9999rem;
+}
+
+#head #face #ears .ear1::after {
+  background-color: #c78475;
+  width: 70%;
+  height: 70%;
 }
 
 #head #face #ears .ear2 {
-  right: -5vw;
-  border-radius: 0 9999px 9999px 0;
+  right: -2.6rem;
+  border-radius: 0 9999rem 9999rem 0;
+  border-left: 0.1rem solid #b19284;
+}
+
+#head #face #ears .ear2::after {
+  background-color: #c78475;
+  width: 70%;
+  height: 70%;
+}
+
+#head #face #nose {
+  position: absolute;
+  top: 11rem;
+  border: 0.5rem solid #b19284;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0 0 100% 100%;
+  border-top: none;
+}
+
+#head #face #mouth {
+  width: 10rem;
+  height: 4rem;
+  position: absolute;
+  overflow: hidden;
+  top: 15rem;
+  background-color: whitesmoke;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (2.5rem)[4];
+      grid-template-columns: repeat(4, 2.5rem);
+  -ms-grid-rows: (2.1rem)[2];
+      grid-template-rows: repeat(2, 2.1rem);
+  border-radius: 0 0 100% 100%;
+}
+
+#head #face #mouth .teeth {
+  border: .1rem solid grey;
+}
+
+#neck {
+  background-color: #e1bca0;
+  height: 10rem;
+  width: 10rem;
+  top: 30rem;
+  position: absolute;
+}
+
+#shirt {
+  background: linear-gradient(160deg, #e4874d, 10%, #d26a3e);
+  position: absolute;
+  width: 40rem;
+  height: 10rem;
+  top: 35rem;
+  border-radius: 100% 100% 0 0;
 }
 /*# sourceMappingURL=style.css.map */
