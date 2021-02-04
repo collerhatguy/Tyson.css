@@ -203,7 +203,7 @@ main::after {
 #shirt {
   background-image: url("../campHalfBloodLogo.png");
   background-repeat: no-repeat;
-  background-size: 30rem 10rem;
+  background-size: 30rem 15rem;
   position: absolute;
   width: 30rem;
   height: 10rem;
