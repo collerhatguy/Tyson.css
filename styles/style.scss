@@ -1,8 +1,8 @@
-@import "./variables/eyeVariables";
-@import "./variables/hairVariables";
-@import "./variables/earVariables";
-@import "./variables/miscVariables";
-@import "./mixin";
+@use "./variables/eyeVariables" as *;
+@use "./variables/hairVariables" as *;
+@use "./variables/earVariables" as *;
+@use "./variables/miscVariables" as *;
+@use "./mixin" as *;
 
 
 *, *::after, *::before {
