@@ -46,16 +46,7 @@ main::after {
   height: 45rem;
 }
 
-#head #hair {
-  background: linear-gradient(160deg, #b19284, #846258, #794c45);
-  position: absolute;
-  top: 2rem;
-  width: 20rem;
-  height: 5rem;
-  border-radius: 9999rem 9999rem 0 0;
-}
-
-#head #face {
+#face {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,7 +64,16 @@ main::after {
   border-radius: 0 0 10% 10%;
 }
 
-#head #face #eyeBrow {
+#hair {
+  background: linear-gradient(160deg, #b19284, #846258, #794c45);
+  position: absolute;
+  top: 2rem;
+  width: 20rem;
+  height: 5rem;
+  border-radius: 9999rem 9999rem 0 0;
+}
+
+#eyeBrow {
   width: 10rem;
   height: 4rem;
   position: absolute;
@@ -82,7 +82,7 @@ main::after {
   border-radius: 100%;
 }
 
-#head #face #eye {
+#eye {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,7 +103,7 @@ main::after {
   position: absolute;
 }
 
-#head #face #eye #iris {
+#iris {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,50 +119,50 @@ main::after {
   background: linear-gradient(160deg, #a56c62, #846258);
 }
 
-#head #face #eye #iris #pupil {
+#pupil {
   width: 1.25rem;
   height: 1.25rem;
   background-color: black;
   border-radius: 100%;
 }
 
-#head #face #ears {
+#ears {
   position: absolute;
   width: 20rem;
   top: 4rem;
 }
 
-#head #face #ears .ear {
+.ear {
   position: absolute;
   height: 5rem;
   width: 2.5rem;
   background-color: #e1bca0;
 }
 
-#head #face #ears .ear1 {
+.ear1 {
   left: -2.5rem;
   border-radius: 9999rem 0 0 9999rem;
 }
 
-#head #face #ears .ear1::after {
+.ear1::after {
   background-color: #c78475;
   width: 70%;
   height: 70%;
 }
 
-#head #face #ears .ear2 {
+.ear2 {
   right: -2.6rem;
   border-radius: 0 9999rem 9999rem 0;
   border-left: 0.1rem solid #b19284;
 }
 
-#head #face #ears .ear2::after {
+.ear2::after {
   background-color: #c78475;
   width: 70%;
   height: 70%;
 }
 
-#head #face #nose {
+#nose {
   position: absolute;
   top: 11rem;
   border: 0.5rem solid #b19284;
@@ -172,7 +172,7 @@ main::after {
   border-top: none;
 }
 
-#head #face #mouth {
+#mouth {
   width: 10rem;
   height: 4rem;
   position: absolute;
@@ -188,7 +188,7 @@ main::after {
   border-radius: 0 0 100% 100%;
 }
 
-#head #face #mouth .teeth {
+.teeth {
   border: .1rem solid grey;
 }
 
@@ -196,7 +196,7 @@ main::after {
   background-color: #e1bca0;
   height: 10rem;
   width: 10rem;
-  top: 30rem;
+  top: 28rem;
   position: absolute;
 }
 
